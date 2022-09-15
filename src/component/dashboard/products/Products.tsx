@@ -18,8 +18,8 @@ const Products = () => {
   const cartProducts = useSelector(getAllCartProducts);
 
   const AllProduct = async () => {
-    const products = await getAllProducts();
-    dispatch(getProductAction(products));
+    const allProduct = await getAllProducts();
+    dispatch(getProductAction(allProduct));
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Products = () => {
         };
       }
     });
-  }, [cartProducts]);
+  }, [cartProducts, products]);
 
   return (
     <div>
